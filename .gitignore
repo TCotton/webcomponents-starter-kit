@@ -95,5 +95,4 @@ jspm_packages
 .gitignore
 .idea/
 
-dist-system
-dist-esm
+dev
