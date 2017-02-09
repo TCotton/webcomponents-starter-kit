@@ -3590,6 +3590,10 @@ vlq@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/vlq/-/vlq-0.2.1.tgz#14439d711891e682535467f8587c5630e4222a6c"
 
+webcomponents.js@^0.7.23:
+  version "0.7.23"
+  resolved "https://registry.yarnpkg.com/webcomponents.js/-/webcomponents.js-0.7.23.tgz#fdbb29e8d9fd667aa72407d89908e62dfeba0513"
+
 webcomponentsjs@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/webcomponentsjs/-/webcomponentsjs-1.0.2.tgz#b028914c579a61d8144913c7c94c2cf73b95fc69"

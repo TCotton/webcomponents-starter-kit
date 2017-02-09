@@ -47,10 +47,10 @@ gulp.task('copy:systemjs', () =>
 
 gulp.task('copy:webcomp', () =>
   gulp.src([
-    './node_modules/webcomponentsjs/full.js'
+    './node_modules/webcomponents.js/webcomponents.js'
   ], {
     dot: true
-  }).pipe(rename('web-components-polyfill.js')).pipe(gulp.dest('dev/dist-modules/libraries')).pipe(gulp.dest('dev/dist-system/libraries'))
+  }).pipe(rename('webcomponents.js')).pipe(gulp.dest('dev/dist-modules/libraries')).pipe(gulp.dest('dev/dist-system/libraries'))
 );
 
 
@@ -70,11 +70,13 @@ gulp.task('babel:dev', () => {
   return gulp.src([
     '!src/libraries/*',
     'src/**'
-  ], {}).pipe(babel({
+  ], {})
+    .pipe($.sourcemaps.init())
+    .pipe(babel({
     plugins: [
       'transform-es2015-modules-systemjs'
     ]
-  })).pipe(gulp.dest('dev/dist-system'))
+  })).pipe($.sourcemaps.write()).pipe(gulp.dest('dev/dist-system'))
 });
 
 gulp.task('dev', ['default'], () => {

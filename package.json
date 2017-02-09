@@ -22,7 +22,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^2.0.1",
     "systemjs": "^0.20.7",
-    "webcomponentsjs": "^1.0.2"
+    "webcomponents.js": "^0.7.23"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
