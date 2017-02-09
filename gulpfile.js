@@ -47,10 +47,10 @@ gulp.task('copy:systemjs', () =>
 
 gulp.task('copy:webcomp', () =>
   gulp.src([
-    './node_modules/webcomponents.js/webcomponents.js'
+    './node_modules/document-register-element/build/document-register-element.js'
   ], {
     dot: true
-  }).pipe(rename('webcomponents.js')).pipe(gulp.dest('dev/dist-modules/libraries')).pipe(gulp.dest('dev/dist-system/libraries'))
+  }).pipe(rename('web-components-ployfill.js')).pipe(gulp.dest('dev/dist-modules/libraries')).pipe(gulp.dest('dev/dist-system/libraries'))
 );
 
 

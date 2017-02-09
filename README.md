@@ -8,6 +8,7 @@
 4. jsx-transform ?? JSX transpiler. A standard and configurable implementation of JSX decoupled from React. https://github.com/alexmingoia/jsx-transform/
 5. immutable-js https://github.com/facebook/immutable-js/
 6. isomorphic-browser-modules: A workflow for using <script type="module"> with a fallback for older browsers: https://github.com/guybedford/isomorphic-browser-modules
+7. templating: mustache.js https://github.com/janl/mustache.js
 
 What else can be taken from React / Redux??
 What can be taken from both the HTML5 boilerplate and the Web Starter Kit:
