@@ -1,10 +1,8 @@
-const path = require('path');
 const gulp = require('gulp');
 const del = require('del');
 const runSequence = require('run-sequence');
 const browserSync = require('browser-sync');
 const gulpLoadPlugins = require('gulp-load-plugins');
-const shell = require('gulp-shell');
 const babel = require('gulp-babel');
 const rename = require('gulp-rename');
 
@@ -44,6 +42,19 @@ gulp.task('copy:systemjs', () =>
 );
 
 /**
+ * Copy and rename Web Components polyfill after minifying it
+ */
+
+gulp.task('copy:webcomp', () =>
+  gulp.src([
+    './node_modules/webcomponentsjs/full.js'
+  ], {
+    dot: true
+  }).pipe(rename('web-components-polyfill.js')).pipe(gulp.dest('dev/dist-modules/libraries')).pipe(gulp.dest('dev/dist-system/libraries'))
+);
+
+
+/**
  * Generate index html file
  */
 
@@ -75,7 +86,7 @@ gulp.task('dev', ['default'], () => {
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
     // https: true,
-    server: ['.tmp', 'dev'],
+    server: ['dev'],
     port: 3000
   });
 
@@ -85,7 +96,7 @@ gulp.task('dev', ['default'], () => {
 
 gulp.task('default', ['clean'], cb =>
   runSequence(
-    ['copy:dist-modules', 'copy:systemjs', 'babel:dev', 'generateIndex'],
+    ['copy:dist-modules', 'copy:systemjs', 'babel:dev', 'generateIndex', 'copy:webcomp'],
     cb
   )
 );
