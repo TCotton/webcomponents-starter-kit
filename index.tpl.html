@@ -3,13 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+
+  <style>
+    x-product {
+      display: inline-block;
+      float: left;
+      margin: 0.5em;
+      border-radius: 3px;
+      background: #FFF;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+      font-family: Helvetica, arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    x-product::slotted(.product-img) {
+      cursor: pointer;
+      background: #FFF;
+      margin: 0.5em;
+    }
+
+    x-product::slotted(.product-name) {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: #08C;
+      border-top: 1px solid #EEE;
+      font-weight: bold;
+      padding: 0.75em 0;
+    }
+  </style>
+
   <script src="https://unpkg.com/gibon/dist/gibon.iife.js"></script>
   <script src="dist-modules/libraries/web-components-ployfill.js"></script>
-
-  <script type="module" src="dist-modules/libraries/modules-bootstrap.js"
-          main="dist-modules/app.js"></script>
-  <script defer src="dist-modules/libraries/modules-bootstrap.js" main="dist-system/app.js"
-          systemjs="dist-modules/libraries/system-production.js"></script>
 
 
   <script type="module" src="dist-modules/libraries/modules-bootstrap.js"
@@ -19,6 +44,11 @@
 
 </head>
 <body>
+<div class="wrapper">
 
+  <div class="top"></div>
+  <div class="bottom"></div>
+
+</div>
 </body>
 </html>
