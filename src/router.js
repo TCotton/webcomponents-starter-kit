@@ -1,6 +1,6 @@
-const router = window.gibon({
+
+
+export default window.gibon({
   '/': (state) => console.log('home'),
   '/features': (state) => console.log('feature')
 });
-
-router.start();

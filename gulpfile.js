@@ -17,6 +17,16 @@ gulp.task('clean', () => {
   return del(['dev'], {dot: true});
 });
 
+
+gulp.task('copy:router', () =>
+  gulp.src([
+    '/Applications/MAMP/htdocs/WebComponentsStarter/node_modules/aviator/aviator.js'
+  ], {
+    dot: true
+  }).pipe(gulp.dest('src/libraries'))
+);
+
+
 /**
  * Copy javascript files unmodified into the dist-modules folder
  */
