@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="dist-modules/libraries/web-components-ployfill.js"></script>
-    <script type="module" src="dist-modules/libraries/modules-bootstrap.js" main="dist-modules/containers/HomePage/index.js"></script>
-    <script defer src="dist-modules/libraries/modules-bootstrap.js" main="dist-system/containers/HomePage/index.js" systemjs="dist-modules/libraries/system-production.js"></script>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="dist-modules/libraries/web-components-ployfill.js"></script>
+
+  <script type="module" src="dist-modules/libraries/modules-bootstrap.js" main="dist-modules/app.js"></script>
+  <script defer src="dist-modules/libraries/modules-bootstrap.js" main="dist-system/app.js"
+          systemjs="dist-modules/libraries/system-production.js"></script>
+
+  <script type="module" src="dist-modules/libraries/modules-bootstrap.js"
+          main="dist-modules/containers/HomePage/index.js"></script>
+  <script defer src="dist-modules/libraries/modules-bootstrap.js" main="dist-system/containers/HomePage/index.js"
+          systemjs="dist-modules/libraries/system-production.js"></script>
+
 </head>
 <body>
 
